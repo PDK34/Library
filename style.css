@@ -1,0 +1,68 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: monospace;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+  overflow: hidden;
+}
+
+.header{
+
+  background-color: black;
+  color: white;
+  font-size: 2em;
+
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .add-book{
+  border: none;
+  outline: none;
+  appearance: none;
+
+  height: 55px;
+  width: auto;
+  font-size: 0.5em;
+  background-color: rgb(170, 99, 237);
+  padding: 30px 15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.header .add-book svg{
+  vertical-align: middle;
+  height: 50px;
+}
+.header .add-book .add-text{
+  visibility: hidden;
+  position: absolute;
+  width: 90px;
+  font-size: 0.6em;
+  top: 90%;
+  color: rgb(255, 255, 255);
+  left: 30%;
+  background-color: rgb(70, 70, 70);
+
+}
+.header .add-book:hover{
+  opacity: 80%;
+  padding: 32px 19px ;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.header .add-book:hover .add-text{
+  visibility: visible;
+  opacity: 80%;
+}
