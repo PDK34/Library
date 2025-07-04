@@ -17,6 +17,24 @@ function addBook(title,author,read){
     displayBooks();
 }
 
+function removeBook(id){
+    const ind = myLib.findIndex((book)=>book.id === id);
+    if(ind!==-1){
+        myLib.splice(ind,1);
+        displayBooks();
+    }
+}
+
+function toggleReadStatus(id){
+    const book = myLib.find((b)=>b.id == id);
+    if(book){
+        book.toggleRead();
+        displayBooks();
+    }
+}
+function displayBooks(){
+
+}
 
 addBtn = document.querySelector(".add-book");
 clsBtn = document.querySelector('.close-btn');
