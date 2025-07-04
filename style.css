@@ -126,7 +126,7 @@ body{
 
   width: 100%;
 }
-input {
+.add input {
   height: 2.4rem;   
   width: 90%;    
   padding: 0.4rem 0.8rem;
@@ -165,7 +165,7 @@ input {
  align-items: end;
 }
 
-input[type = 'checkbox']{
+.read input[type = 'checkbox']{
   width: 3rem;
   height: 3rem;
   background-color: #ffffff;    
@@ -175,12 +175,35 @@ input[type = 'checkbox']{
 
   display: grid;
   gap: 2rem;
-  grid-template-rows: repeat();
-  grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+  grid-template-rows: repeat(3,1fr);
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
 }
 
 .card{
   background-color: rgb(162, 15, 230);
-  border: 1px solid magenta;
+  border: 2px solid magenta;
+  border-left: 8px solid orange;
   border-radius: 10px;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card .name{
+  font-size: 2.4rem;
+  color: white;
+}
+
+.card .seen{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+.card .seen input{
+  width: 2rem;
+  height: 2rem;
 }
