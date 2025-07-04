@@ -52,7 +52,7 @@ body{
 
 .header .add-book svg:hover{
   transform: scale(1.05);
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 .header .add-book .add-text{
   visibility: hidden;
@@ -67,8 +67,8 @@ body{
 }
 .header .add-book:hover{
   background-color: rgb(178, 100, 252);
-  padding: 3rem 1.7rem;
-  transition: 0.5s ease-in-out;
+  padding: 3rem 1.5rem;
+  transition: 0.2s ease-in-out;
   cursor: pointer;
 }
 
@@ -89,39 +89,98 @@ body{
   z-index: 800;
 }
 .add-form{
-  display: none;
-  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 2rem;
+  background-color: rgba(0, 0, 0, 0.85);
+
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 60%;
-  width: 60%;
+  height: auto;
+  max-height: 80%;
+  width: 90%;
+  max-width: 700px;
+  overflow-y: auto;
   z-index : 900;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-  gap: 5.5rem;
+
+
   border: solid 1px black;
-  border-radius: 1.5rem;
-  font-size: 3.6rem;
-  padding: 2.5rem 0 0  1.5rem;
+  border-radius: 1.2rem;
+  
+  font-size: 2.6rem;
   color: white;
+
+  padding: 2rem;
+  
+  box-shadow: 0 10px 40px rgba(51, 0, 170, 0.5);
+
 }
 
-label{
+.add{
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
+
+  width: 100%;
 }
-input{
-  min-width: 120%;
-  font-size: 2.6rem;
+input {
+  height: 2.4rem;   
+  width: 90%;    
+  padding: 0.4rem 0.8rem;
+  font-size: 1.4rem;    
+  line-height: 1.2; 
 }
+
 .add-form .submit{
   border-radius: 5px;
   background-color: blueviolet;
-  font-size: 3.1rem;
-  padding: 1rem;
+  font-size: 2rem;
+  padding: 0.8rem;
   
   border: 1px solid blueviolet;
+}
+
+.add-form .close-btn{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2.5rem;
+  padding: 0.3em 0.6rem;
+  background: transparent;
+  border: none;
+  color: #fff;
+}
+
+.submit:hover , .close-btn:hover , .read input:hover{
+  cursor: pointer;
+  opacity: 80%;
+}
+.add-form .read{
+ display: flex;
+ gap: 2rem;
+ justify-content: center;
+ align-items: end;
+}
+
+input[type = 'checkbox']{
+  width: 3rem;
+  height: 3rem;
+  background-color: #ffffff;    
+}
+.cards{
+  padding:2rem;
+
+  display: grid;
+  gap: 2rem;
+  grid-template-rows: repeat();
+  grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+}
+
+.card{
+  background-color: rgb(162, 15, 230);
+  border: 1px solid magenta;
+  border-radius: 10px;
 }
