@@ -35,8 +35,9 @@ function toggleReadStatus(id){
 
 const cardContainer = document.querySelector('.cards')
 function displayBooks(){
+    cardContainer.innerHTML = '';
     myLib.forEach((book) => {
-        cardContainer.innerHTML = '';
+        
 
         const div = document.createElement('div');
         div.classList.add('card');
