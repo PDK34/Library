@@ -13,7 +13,7 @@ body{
   height: 100vh;
   display: grid;
   grid-template-rows: 1fr 5fr;
-  overflow: hidden;
+  overflow-x: hidden;
   font-size: 1.6rem;
 }
 
