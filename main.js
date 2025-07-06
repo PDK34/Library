@@ -1,10 +1,4 @@
-
-const myLib = [
-    {title:'My',
-        author:'h',
-        read :true
-    }
-];
+const myLib = [];
 function Book(title,author,read){
     this.id = crypto.randomUUID();
     this.title = title;
