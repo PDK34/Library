@@ -22,11 +22,12 @@ body{
   background-color: black;
   color: white;
   font-size: 2em;
-
+  min-height: 10rem;
   padding: 0 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .header .add-book{

@@ -93,6 +93,8 @@ form.addEventListener('submit',(e) => {
     const author = authName.value
     const read = readCheck.checked
     addBook(name,author,read)
+    form.reset()
+    formContainer.style.display = 'none'
 })
 addBtn.addEventListener("click",() => formContainer.style.display = 'block')
 clsBtn.addEventListener('click',()=>  formContainer.style.display = 'none')
