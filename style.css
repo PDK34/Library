@@ -135,6 +135,15 @@ body{
   line-height: 1.2; 
 }
 
+.add .page-label{
+  font-size: 1.8rem;
+}
+
+.add.pages input{
+  width: 25%;
+  margin-left: -1rem;
+}
+
 .add-form .submit{
   border-radius: 5px;
   background-color: blueviolet;
