@@ -12,7 +12,7 @@ body{
   font-family: monospace;
   height: 100vh;
   display: grid;
-  grid-template-rows: 1fr 6fr;
+  grid-template-rows: 1fr 6.5fr;
   overflow-x: hidden;
   font-size: 1.6rem;
 }
@@ -48,13 +48,10 @@ body{
 }
 .header .add-book svg{
   vertical-align: middle;
-  height: 4rem
+  height: 3.5rem
 }
 
-.header .add-book svg:hover{
-  transform: scale(1.05);
-  transition: 0.2s ease-in-out;
-}
+
 .header .add-book .add-text{
   visibility: hidden;
   position: absolute;
