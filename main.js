@@ -1,8 +1,9 @@
 const myLib = [];
-function Book(title,author,read){
+function Book(title,author,pages,read){
     this.id = crypto.randomUUID();
     this.title = title;
     this.author = author;
+    this.pages = pages;
     this.read = read;
 }
 
@@ -10,8 +11,8 @@ Book.prototype.toggleRead = function(){
     this.read = !this.read;
 }
 
-function addBook(title,author,read){
-    const book = new Book(title,author,read);
+function addBook(title,author,pages,read){
+    const book = new Book(title,author,pages,read);
     myLib.push(book);
     displayBooks();
 }
@@ -47,8 +48,13 @@ function displayBooks(){
         div.appendChild(title)
     
         const author = document.createElement('div')
-        author.textContent = book.author
+        author.textContent = `By ${book.author}`
         div.appendChild(author);
+
+        const pages = document.createElement('div')
+        pages.classList.add('pages')
+        pages.textContent = `No. of pages: ${book.pages}`
+        div.appendChild(pages);
 
         const seen = document.createElement('div')
         seen.classList.add('seen')
@@ -80,13 +86,15 @@ addBtn = document.querySelector(".add-book");
 clsBtn = document.querySelector('.close-btn');
 bName = document.querySelector('#name')
 authName = document.querySelector('#auth-name')
+pageNo = document.querySelector('#page-no')
 readCheck = document.querySelector('#read-check')
 form.addEventListener('submit',(e) => {
     e.preventDefault();
     const name = bName.value
     const author = authName.value
+    const pages = pageNo.value;
     const read = readCheck.checked
-    addBook(name,author,read)
+    addBook(name,author,pages,read)
     form.reset()
     formContainer.style.display = 'none'
 })
