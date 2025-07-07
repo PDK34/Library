@@ -12,7 +12,7 @@ body{
   font-family: monospace;
   height: 100vh;
   display: grid;
-  grid-template-rows: 1fr 5fr;
+  grid-template-rows: 1fr 6fr;
   overflow-x: hidden;
   font-size: 1.6rem;
 }
@@ -21,8 +21,8 @@ body{
 
   background-color: black;
   color: white;
-  font-size: 2em;
-  min-height: 10rem;
+  font-size: 2.5rem;
+  min-height: 9rem;
   padding: 0 3rem;
   display: flex;
   justify-content: space-between;
@@ -39,7 +39,7 @@ body{
   width: auto;
   font-size: 0.5em;
   background-color: rgb(135, 36, 228);
-  padding: 3rem 1.5rem;
+  padding: 3rem 1rem;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -48,7 +48,7 @@ body{
 }
 .header .add-book svg{
   vertical-align: middle;
-  height: 5rem
+  height: 4rem
 }
 
 .header .add-book svg:hover{
@@ -59,15 +59,15 @@ body{
   visibility: hidden;
   position: absolute;
   width: 9rem;
-  font-size: 0.6em;
+  font-size:1rem;
   top: 105%;
   color: rgb(255, 255, 255);
-  left: 30%;
+  left: 0%;
   background-color: rgb(70, 70, 70);
 
 }
 .header .add-book:hover{
-  background-color: rgb(178, 100, 252);
+  background-color: rgb(161, 61, 255);
   padding: 3rem 1.5rem;
   transition: 0.2s ease-in-out;
   cursor: pointer;
