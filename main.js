@@ -1,4 +1,12 @@
-const myLib = [];
+const myLib = [
+    {   
+        id: crypto.randomUUID(),
+        title:'Meditations',
+        author:'Marcus Aurelius',
+        pages:256,
+        read:true
+    }
+];
 function Book(title,author,pages,read){
     this.id = crypto.randomUUID();
     this.title = title;
@@ -100,3 +108,5 @@ form.addEventListener('submit',(e) => {
 })
 addBtn.addEventListener("click",() => formContainer.style.display = 'block')
 clsBtn.addEventListener('click',()=>  formContainer.style.display = 'none')
+
+displayBooks(); 
