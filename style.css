@@ -45,6 +45,9 @@ body{
   justify-content: center;
   align-items: center;
   position: relative;
+
+    transition: 0.2s ease-in-out;
+  cursor: pointer;
 }
 .header .add-book svg{
   vertical-align: middle;
@@ -64,16 +67,16 @@ body{
 
 }
 .header .add-book:hover{
-  background-color: rgb(161, 61, 255);
-  padding: 3rem 1.5rem;
-  transition: 0.2s ease-in-out;
-  cursor: pointer;
+  background-color: rgb(152, 43, 253);
+  padding: 3rem 1.2rem;
+
 }
 
 .header .add-book:hover .add-text{
   visibility: visible;
-  opacity: 80%;
+  opacity: 90%;
   border-radius: 5px;
+  padding: 0.2rem;
 }
 
 .form-container{
