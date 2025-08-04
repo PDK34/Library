@@ -1,23 +1,19 @@
-const myLib = [
-    {   
-        id: crypto.randomUUID(),
-        title:'Meditations',
-        author:'Marcus Aurelius',
-        pages:256,
-        read:true
-    }
-];
-function Book(title,author,pages,read){
+const myLib = [];
+class Book{
+    constructor(title,author,pages,read){
     this.id = crypto.randomUUID();
     this.title = title;
     this.author = author;
     this.pages = pages;
-    this.read = read;
+    this.read = read;}
+
+    toggleRead(){
+        this.read = !this.read
+    }
 }
 
-Book.prototype.toggleRead = function(){
-    this.read = !this.read;
-}
+const Meditations = new Book('Meditations','Marcus Aurelius',256,true);
+myLib.push(Meditations);
 
 function addBook(title,author,pages,read){
     const book = new Book(title,author,pages,read);
