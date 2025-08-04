@@ -12,8 +12,11 @@ class Book{
     }
 }
 
-const Meditations = new Book('Meditations','Marcus Aurelius',256,true);
+const Meditations = new Book('Meditations','Marcus Aurelius',256,false);
 myLib.push(Meditations);
+
+const ChildrenOfTime = new Book('Children of Time','Adrian Tchaikovsky',629,true);
+myLib.push(ChildrenOfTime);
 
 function addBook(title,author,pages,read){
     const book = new Book(title,author,pages,read);
