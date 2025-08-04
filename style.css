@@ -15,6 +15,7 @@ body{
   grid-template-rows: 1fr 6.5fr;
   overflow-x: hidden;
   font-size: 1.6rem;
+  
 }
 
 .header{
@@ -83,7 +84,7 @@ body{
   display: none;
   width: 100%;
   height: 100%;
-  background-color: rgb(0, 0, 0,0.3);
+  background-color: rgb(0, 0, 0,0.7);
   position: fixed;
   top: 0;
   left: 0;
@@ -95,7 +96,7 @@ body{
   justify-content: start;
   align-items: start;
   gap: 2rem;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.95);
 
   position: fixed;
   top: 50%;
@@ -109,7 +110,7 @@ body{
   z-index : 900;
 
 
-  border: solid 1px black;
+  border: solid 1px rgb(137, 11, 254);
   border-radius: 1.2rem;
   
   font-size: 2.6rem;
