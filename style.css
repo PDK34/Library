@@ -193,8 +193,8 @@ body{
 
 .card{
   background-color: #1e1e1e;
-  border: 2px solid magenta;
-  border-left: 6px solid orange;
+  border: 2px solid rgb(138,43,226);
+  border-left: 8px solid rgb(255, 252, 231);
   border-radius: 10px;
   padding: 2rem;
 
@@ -203,7 +203,7 @@ body{
   gap: 1rem;
   position: relative;
     color: #e0e0e0;
-  accent-color: #90CAF9;
+  accent-color: #49adff;
 }
 
 .card .name{
