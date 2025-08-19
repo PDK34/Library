@@ -12,15 +12,30 @@ class Book{
     }
 }
 
-const Meditations = new Book('Meditations','Marcus Aurelius',256,false);
-myLib.push(Meditations);
+function getBooksFromLocal(){
+    myLib.length = 0;   
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        const item = JSON.parse(localStorage.getItem(key));
 
-const ChildrenOfTime = new Book('Children of Time','Adrian Tchaikovsky',629,true);
-myLib.push(ChildrenOfTime);
+        const book = new Book(item.title, item.author, item.pages, item.read);
+        book.id = item.id;           
+        myLib.push(book);
+    }
+}
+function addBooksToLocal(){
+    localStorage.clear();
+    myLib.forEach((book) => {
+        localStorage.setItem(book.id,JSON.stringify(book))
+    })
+}
+
+
 
 function addBook(title,author,pages,read){
     const book = new Book(title,author,pages,read);
     myLib.push(book);
+    addBooksToLocal();
     displayBooks();
 }
 
@@ -28,6 +43,7 @@ function removeBook(id){
     const ind = myLib.findIndex((book)=>book.id === id);
     if(ind!==-1){
         myLib.splice(ind,1);
+        addBooksToLocal();
         displayBooks();
     }
 }
@@ -36,6 +52,7 @@ function toggleReadStatus(id){
     const book = myLib.find((b)=>b.id == id);
     if(book){
         book.toggleRead();
+        addBooksToLocal();
         displayBooks();
     }
 }
@@ -71,7 +88,9 @@ function displayBooks(){
         const input = document.createElement('input')
         input.type = 'checkbox';
         input.checked = book.read;
+
         input.addEventListener('change' ,()=>toggleReadStatus(book.id))
+
         seen.append(span,input);
         div.appendChild(seen);
 
@@ -108,4 +127,16 @@ form.addEventListener('submit',(e) => {
 addBtn.addEventListener("click",() => formContainer.style.display = 'block')
 clsBtn.addEventListener('click',()=>  formContainer.style.display = 'none')
 
+
+getBooksFromLocal();
+if(myLib.length === 0){
+    const Meditations = new Book('Meditations','Marcus Aurelius',256,false);
+    myLib.push(Meditations);
+
+    const ChildrenOfTime = new Book('Children of Time','Adrian Tchaikovsky',629,true);
+    myLib.push(ChildrenOfTime);
+
+    addBooksToLocal();
+
+}
 displayBooks(); 

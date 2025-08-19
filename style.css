@@ -6,11 +6,12 @@
 
 html {
   font-size: 62.5%; 
+  height: 100%;
 }
 
 body{
   font-family: monospace;
-  height: 100vh;
+  height: 100%;
   display: grid;
   grid-template-rows: 1fr 6.5fr;
   overflow-x: hidden;
