@@ -191,6 +191,7 @@ body {
   grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
   grid-auto-rows: max-content;
   background-color: #151515;
+  transition: all 0.2s ease-in-out;
 }
 
 .card{
@@ -235,9 +236,10 @@ body {
   background: transparent;
   border: none;
   font-size: 1.6rem;
+  transition: all 0.1s ease-in-out;
 }
 .card .remove-btn:hover{
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   cursor: pointer; 
-  opacity: 80%;
+  opacity: 90%;
 }

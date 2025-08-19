@@ -1,6 +1,6 @@
 # My Library
 A basic web app to manage your book library
----
+
 ## Features
 
 - Add new books with their details
