@@ -243,3 +243,13 @@ body {
   cursor: pointer; 
   opacity: 90%;
 }
+
+input:invalid {
+    border: 2px solid red;
+    border-radius: 3px;
+}
+
+input:valid {
+    border: 2px solid green;
+    border-radius: 3px;
+}
