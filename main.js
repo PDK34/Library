@@ -105,6 +105,13 @@ function displayBooks(){
 
 }
 
+function requiredValidityCheck(element){
+    if(element.validity.valueMissing){
+        element.setCustomValidity("Empty field name not allowed!Please fill out this field :)")
+    }else{
+            element.setCustomValidity("");
+    }
+}
 formContainer = document.querySelector('.form-container');
 form =document.querySelector('.add-form')
 saveBtn = document.querySelector('.submit');
@@ -123,6 +130,25 @@ form.addEventListener('submit',(e) => {
     addBook(name,author,pages,read)
     form.reset()
     formContainer.style.display = 'none'
+})
+
+bName.addEventListener('input',()=>{
+    requiredValidityCheck(bName);
+})
+bName.addEventListener('invalid',()=>{
+    requiredValidityCheck(bName);
+})
+authName.addEventListener('input',()=>{
+    requiredValidityCheck(authName);
+})
+authName.addEventListener('invalid',()=>{
+    requiredValidityCheck(authName);
+})
+pageNo.addEventListener('input',()=>{
+    requiredValidityCheck(pageNo);
+})
+pageNo.addEventListener('invalid',()=>{
+    requiredValidityCheck(pageNo);
 })
 addBtn.addEventListener("click",() => formContainer.style.display = 'block')
 clsBtn.addEventListener('click',()=>  formContainer.style.display = 'none')
